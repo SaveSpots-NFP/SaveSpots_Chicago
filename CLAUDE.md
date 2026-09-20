@@ -15,6 +15,9 @@ itself must differ. Full program rules live in `references/SaveSpots Deliverable
 FINAL.pdf` — read that document in full before making methodology decisions; this file
 summarizes it but is not a replacement.
 
+Repo: github.com/SaveSpots-NFP/SaveSpots_Chicago (moved from personal account
+maazsuglatwala/SaveSpots_Chicago to the org on 2026-09-20; local origin updated).
+
 Reference repo (Dallas, for structural comparison only): github.com/Ilyas1434/dallas-research-savespots
 
 ## Chicago's data environment
