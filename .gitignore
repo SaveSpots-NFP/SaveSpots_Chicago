@@ -5,3 +5,14 @@ __pycache__/
 .ipynb_checkpoints/
 venv/
 .venv/
+
+# PRIVACY FLOOR (program hard rule, no exceptions): raw Cook County Medical
+# Examiner pulls contain exact addresses, lat/long, and case numbers for
+# individual decedents. This repo is PUBLIC. Never commit raw ME data here,
+# even under data/raw/. Only aggregated outputs (tract/ZIP/community-area
+# level or coarser) may be committed, under data/clean/.
+# Reproducibility instead comes from the pull script + its pinned query
+# parameters + pull date, which ARE committed (scripts/ is not sensitive).
+data/raw/cook_county_me*
+data/raw/*medical_examiner*
+data/raw/*_me_raw*

@@ -16,7 +16,7 @@ finding, a silent omission is not.
 | TIGER/Line block & tract shapefiles | U.S. Census Bureau | census.gov TIGER/Line | Block/tract | 2024 vintage | Open | **Use** |
 | ACS 5-year poverty (S1701) & uninsurance (S2701) | U.S. Census Bureau | data.census.gov / API | Census tract | 2020–2024 5-yr | Open | **Use** — but Deliverable 1's DataUSA-derived demographic figures must be replaced with a direct table pull before manuscript use |
 | CDC/ATSDR Social Vulnerability Index | ATSDR | atsdr.cdc.gov/placeandhealth/svi | Census tract | 2022 | Open | **Use** |
-| Cook County Medical Examiner Case Archive / opioid dashboard | Cook County | cookcountyil.gov (exact dashboard URL not yet resolved — see gap below) | **Case-level**, geography TBD (see note) | Updated twice daily per press coverage | Open, web dashboard | **Use — this is the paper's central data asset**; need to confirm exact geographic precision and whether a bulk download/API exists vs. dashboard-only access |
+| Cook County Medical Examiner Case Archive | Cook County | **CONFIRMED 2026-10-11**: `datacatalog.cookcountyil.gov/resource/cjeq-bs86.json` (Socrata API) | **Case-level — exact street address + lat/long**, plus `chi_commarea`/`chi_ward`/ZIP for safe aggregation | Aug 2014–present, updated daily; ~740K total records, opioid subset directly queried this pass | Open, full SoQL API + CSV/JSON/GeoJSON export | **Use — this is the paper's central data asset.** Individual-level; privacy floor applies in full (see CLAUDE.md) — raw pulls are gitignored, never committed |
 | Cook County/Chicago joint opioid surveillance report | CCDPH/CDPH | cookcountypublichealth.org | Community area / citywide | Published June 2026, annual | Open, PDF | **Use** for finalized multi-year trend and demographic breakdowns |
 | CDC NCHS model-based overdose mortality | CDC NCHS | data.cdc.gov (Socrata) | Census tract (aggregated to native units, per Dallas methodology) | Rolling 12-mo | Open | **Use as a secondary/comparison layer only** — since Cook County ME gives measured case-level data, the CDC modeled product's role here is to demonstrate the same modeled-vs-measured contrast the reference paper had to rely on exclusively; it is not our primary source |
 | SAMHSA treatment facility locator | SAMHSA | findtreatment.gov | Point | Rolling | Open | **Use** as one input to the supply registry (Deliverable 3 registry-building task) |
@@ -81,16 +81,22 @@ methodological contribution:
      analysis — directly following Dallas's Section 8.6 method, which this paper
      has no reason to depart from since it is method-agnostic to data environment.
 
-**4. Geographic unit.** Census tract for the composite and placement analysis
-(matching ACS/SVI's native resolution), census block for population-weighted
-distance (matching Census P.L. 94-171's native resolution) — identical geographic
-strategy to Dallas. The open question specific to this environment is what geography
-the Cook County ME dashboard exposes mortality at without violating the privacy
-floor; if it publishes at address or point level internally but the public dashboard
-aggregates to community area or ZIP, the mortality validation in Step 2 runs at that
-coarser level, and this paper states that resolution explicitly — exactly as the
-reference paper states 150 CDC aggregation units as its "honest resolution" for
-Dallas.
+**4. Geographic unit.** **Resolved 2026-10-11.** Census tract for the composite and
+placement analysis (matching ACS/SVI's native resolution), census block for
+population-weighted distance (matching Census P.L. 94-171's native resolution) —
+identical geographic strategy to Dallas. The ME data question is now answered: the
+Case Archive API returns exact lat/long per case, which the pipeline can
+point-in-polygon against Census tract boundaries to aggregate to **tract-level
+counts** — finer than Dallas's 150-unit CDC aggregation and not suppressed by any
+confidentiality rule, since nothing stops us from aggregating ourselves (the
+privacy floor is about what we *publish*, not what geography exists upstream). Small
+tracts with very low counts (1–4 deaths) will still need a documented small-cell
+handling rule — likely matching the reference paper's practice of flagging rather
+than suppressing, since Illinois has no suppression regime forcing our hand the way
+Texas's did, but a near-zero-population tract reporting an exact count of 1 could
+still be functionally identifying and needs a stated policy before publication (e.g.,
+a minimum display threshold, consistent with the privacy floor's spirit even where
+not legally mandated).
 
 **5. Composite construction (if built).** Proposed five layers, equal-weighted
 0.20 each as a starting justification (mirroring the CDC/ATSDR SVI convention the
@@ -122,16 +128,16 @@ from the reference paper's five-layer design.
      absent, matching the reference paper's Dallas finding, but not yet confirmed
      one way or the other; will be checked directly against whatever registry
      fields the assembled supply data actually has once built, not assumed.
-   - Exact address-level ME case locations, if the public dashboard does not expose
-     them (likely, per the privacy floor and standard ME confidentiality practice)
-     — the mortality validation will run at whatever the finest publicly available
-     aggregation is, stated explicitly, mirroring Dallas's Figure 4 treatment.
+   - ~~Exact address-level ME case locations~~ **Resolved 2026-10-11** — the API
+     does expose exact addresses/coordinates per case (see CLAUDE.md). This is not
+     a gap; it's the opposite problem (handled via the privacy floor + gitignored
+     raw pulls, not via reporting an absence).
 
 ## Open items before Week 5 pipeline work begins
 
-- Resolve the exact Cook County ME dashboard URL and confirm its true geographic
-  resolution and whether a bulk export/API exists (the dashboard link found this
-  pass 404'd; only press coverage was confirmed, not the tool itself).
+- ~~Resolve the exact Cook County ME dashboard URL...~~ **Done 2026-10-11.**
+  Confirmed endpoint, schema, and live-queried opioid counts — see CLAUDE.md's
+  "Cook County Medical Examiner Case Archive" section for full detail.
 - Confirm whether the IDHS DOPP contact list is complete enough to serve as a
   registry seed, or whether direct outreach to Chicago Recovery Alliance, COIP, and
   Cook County Health is needed to supplement it with actual site addresses.

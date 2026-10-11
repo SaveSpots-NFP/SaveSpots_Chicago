@@ -39,7 +39,42 @@ Chicago/Cook County and may need to be assembled).
 - Privacy floor (hard rule, no exceptions): nothing published — figure, table, map,
   repo file, poster panel — may contain individual-level records, addresses, or
   coordinates of overdose events or decedents. Analyze at point level locally only;
-  publish aggregated (tract / ZIP / community area) only.
+  publish aggregated (tract / ZIP / community area) only. **This repo is public
+  (github.com/SaveSpots-NFP/SaveSpots_Chicago)**, so "repo file" includes
+  `data/raw/` — raw ME pulls are gitignored (see `.gitignore`), never committed,
+  even as a "raw snapshot." Reproducibility for that input comes from the pull
+  script + pinned query parameters + pull date (which are committed), not from a
+  committed copy of the sensitive rows themselves.
+
+### Cook County Medical Examiner Case Archive — CONFIRMED, this is the paper's central dataset
+
+Verified 2026-10-11 via direct Socrata API query (not a secondary summary):
+- **Endpoint**: `https://datacatalog.cookcountyil.gov/resource/cjeq-bs86.json`
+  (Socrata SODA API — supports SoQL `$where`/`$select`/`$group`, CSV/JSON/GeoJSON
+  export). Dataset page: datacatalog.cookcountyil.gov/Health-Human-Services/
+  Medical-Examiner-Case-Archive/cjeq-bs86. ~740K total records (all-cause), updated
+  daily, Aug 2014–present.
+- **Schema includes**: `opioids` (boolean flag — directly filterable), `age`,
+  `gender`, `race`, `latino`, `manner`, `primarycause`/`secondarycause`,
+  `incident_street`/`incident_city`/`incident_zip`, `latitude`/`longitude`,
+  **`residence_city`/`residence_zip`** (separate from incident — resolves the
+  guide's residence-vs-incident warning directly), `chi_ward`, `chi_commarea`
+  (Chicago Community Area — a ready-made Chicago-specific geography).
+- **`incident_street` is an exact street address**, not block-truncated — confirmed
+  by live sample pull. This is genuinely individual-level data; treat with the full
+  privacy floor above.
+- **Live-queried opioid death counts** (via `$where` on `death_date`, pulled
+  2026-10-11 — these will drift as the dataset updates daily, re-pull before citing
+  a final number): countywide 2023 = 1,822; countywide 2024 = 1,171; Chicago-only
+  (`incident_city=CHICAGO`) 2023 = 1,371; Chicago-only 2024 = 849.
+- **This confirms and sharpens Deliverable 1's "mortality products disagree by
+  construction" finding**: the live ME Case Archive API, the ME's own periodic
+  "confirmed" press-release totals (1,026 for 2024 as of Jan 2025), and the
+  CCDPH/CDPH joint surveillance report (1,138 countywide / 835 Chicago for 2024)
+  are three distinct products that do not match each other exactly — likely
+  differing in case-inclusion criteria, incident-vs-residence attribution, and
+  processing/snapshot date. Cite each to its exact source and pull date; never
+  combine or treat one as correcting another, per the research contract.
 - Still need to inventory: naloxone/harm-reduction access point registry (state or
   county — if none exists, that's Environment C and the registry becomes a
   publishable data contribution in its own right), Illinois Good Samaritan / naloxone

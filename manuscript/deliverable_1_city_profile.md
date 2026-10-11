@@ -20,21 +20,28 @@ incorrect uninsured-rate comparison.*
 
 ## Overdose burden
 
-Cook County recorded two mortality products in 2024 that disagree by construction —
-the same pattern the reference paper documents for Dallas, and worth stating
-explicitly rather than picking one number and hiding the other. The **Cook County
-Medical Examiner's Office** confirmed 1,026 opioid overdose deaths countywide for
-calendar year 2024 (87% fentanyl-involved), the lowest count since 2015, as of its
-January 2025 preliminary release. The **joint Cook County Department of Public
-Health / Chicago Department of Public Health surveillance report**, released June
-2026 with more complete case processing, instead finalizes county-wide 2024 opioid
-deaths at 1,138 (835 Chicago, 279 suburban Cook County), down from 1,783 in 2023 and
-1,961 in 2022 — a 42% decline from 2022 to 2024. Neither figure is wrong; they are
-different products at different processing stages, exactly the distinction the
-reference paper draws between VSRR provisional counts and DCHHS finalized counts.
-This paper will cite each to its source and window and will not combine them,
-following the research contract's classification standard (Measured/Modeled/
-Published).
+Cook County recorded at least **three** mortality products for 2024 that disagree by
+construction — a richer version of the pattern the reference paper documents for
+Dallas (which had two), and worth stating explicitly rather than picking one number
+and hiding the others. The **Cook County Medical Examiner's Office** confirmed 1,026
+opioid overdose deaths countywide for calendar year 2024 (87% fentanyl-involved) as
+of its January 2025 preliminary press release. The **joint Cook County/Chicago
+Department of Public Health surveillance report**, released June 2026, finalizes
+county-wide 2024 opioid deaths at 1,138 (835 Chicago, 279 suburban). Directly
+querying the **Medical Examiner's own live Case Archive API** (datacatalog.
+cookcountyil.gov, resource `cjeq-bs86`, opioid-flagged records, pulled 2026-10-11)
+returns a third figure: 1,171 countywide, 849 Chicago-only, for 2024 — and for 2023,
+1,822 countywide / 1,371 Chicago-only, resolving an earlier ambiguity in this draft
+about whether "1,783" (the joint report's 2023 figure) was Chicago-only or
+county-wide (it is close to, but not exactly, either live-API figure, consistent
+with it being a distinct product on its own processing timeline). All three numbers
+are *measured*, not modeled — this is not Dallas's modeled-vs-suppressed dynamic —
+they differ because they're different products: a periodic confirmed snapshot, a
+finalized annual report, and a continuously-updated live case feed queried directly.
+This paper will cite each to its exact source and pull date and will not combine or
+reconcile them, following the research contract's classification standard
+(Measured/Modeled/Published) and its instruction to take the more conservative
+figure and say so when a single number is needed for a given claim.
 
 Using the finalized joint report: Chicago's 2024 opioid overdose mortality rate was
 28.7 per 100,000 — falling 37.2% from 2023, but still nearly double the Illinois
@@ -239,10 +246,11 @@ mortality disparity, and what does the local supply's chemistry mean for what
 
 ## Verification needed before this enters the manuscript (Deliverable 3 tasks)
 
-- [ ] Pull Chicago-only (not county-wide) multi-year opioid death counts directly
-      from the primary CDPH/CCDPH joint report PDF — the 1,783-in-2023 figure could
-      not be confidently disambiguated as Chicago-only vs. county-wide from search
-      summaries alone; resolve from the source document, not from this draft.
+- [x] ~~Pull Chicago-only (not county-wide) multi-year opioid death counts~~
+      **Done 2026-10-11** — queried the ME's live API directly rather than the
+      joint-report PDF (a stronger primary source, since it's the underlying case
+      data, not a derived report). See the overdose burden section above for the
+      resolved figures across all three products.
 - [ ] Pull exact Chicago racial/ethnic composition percentages from ACS detailed
       tables directly (DataUSA, used here for a first pass, is not a Tier-1 source
       per program standards and its Hispanic-population figure looked internally
