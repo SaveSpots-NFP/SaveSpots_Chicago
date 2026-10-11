@@ -31,35 +31,62 @@ implementation-reach and supply-chemistry, not legal access.
 
 ## 4.2 Good Samaritan Law
 
-Illinois's Emergency Medical Services Access Law (720 ILCS 570/414, added by Public
-Act 097-0678) provides **actual immunity from arrest, charge, or prosecution** — not
-merely an affirmative defense, the structure Texas's Jessica Sosa Act uses — for a
-person who in good faith seeks or obtains emergency help for an overdose, covering
-both the caller and the person overdosing. Immunized offenses include Illinois
-Controlled Substances Act possession (§§401–402), drug paraphernalia possession
-(Drug Paraphernalia Control Act §3.5), and Methamphetamine Control Act violations
-(§§55–60). No repeat-use bar comparable to the Jessica Sosa Act's 18-month limit
-was identified in this pass.
+*(Revised 2026-10-11 against verified primary statutory text — the prior draft of
+this section, built from a secondary AI-generated summary, overstated what this law
+covers. Corrected below. This is exactly the failure mode Section 14/"AI is not a
+source" warns about, caught by direct text verification per this week's to-do.)*
 
-Immunity is not unconditional: it is capped by substance-specific quantity
-thresholds (under 3g for heroin/cocaine/morphine/LSD, under 40g for peyote/
-barbiturates/amphetamines, under 6g for pentazocine/methaqualone/PCP/ketamine) and is
-forfeited if law enforcement already had independent reasonable suspicion or probable
-cause before the call was made. Fentanyl is not named explicitly; it falls under a
-catchall "other Schedule I/II narcotic" threshold of under 40g — a quantity that, given
-fentanyl's potency (effective doses are measured in milligrams), covers the
-overwhelming majority of realistic personal-possession scenarios. In this respect the
-threshold structure, though seemingly generic, functions more protectively for
-fentanyl-era overdoses than it might first appear.
+Illinois's overdose immunity provision, 720 ILCS 570/414 ("Overdose; limited
+immunity from prosecution," added by P.A. 97-678, eff. 6-1-12), reads, in relevant
+part: *"A person who, in good faith, seeks or obtains emergency medical assistance
+for someone experiencing an overdose shall not be charged or prosecuted for Class 4
+felony possession of a controlled, counterfeit, or look-alike substance or a
+controlled substance analog if evidence for the Class 4 felony possession charge was
+acquired as a result of the person seeking or obtaining emergency medical
+assistance"* (subsection (b)); subsection (c) extends the identical protection to the
+person actually experiencing the overdose. This **is** immunity from charge/
+prosecution, not merely an affirmative defense raised at trial — a meaningfully
+stronger structure than Texas's Jessica Sosa Act. No repeat-use bar comparable to the
+Jessica Sosa Act's 18-month limit exists in the text.
 
-**What it does in practice:** a substantively stronger deterrent-reduction tool than
-Dallas has, on paper. **Strategic implication:** rather than a legislative-fix
-recommendation (Dallas's top ask), this paper's equivalent recommendation is likely
-an awareness/education gap — GAO's finding that protection only reduces death rates
-where bystanders *know* the protection exists applies regardless of how strong the
-underlying statute is, and this paper should investigate whether West Side residents
-are aware of 720 ILCS 570/414 before assuming the law's strength translates into
-practice.
+Two corrections to the prior draft, now confirmed against the statute itself:
+
+1. **Scope is narrower than previously stated.** The immunity covers only **Class 4
+   felony possession** under the Illinois Controlled Substances Act. It does **not**
+   extend to drug paraphernalia possession, to Methamphetamine Control Act
+   violations, or to any Criminal Code offense — those were incorrectly attributed
+   to this statute in the prior draft based on an unverified secondary summary and
+   are removed here. The actual immunized conduct is narrower than Illinois's harm
+   reduction reputation might suggest.
+2. **Drug-induced homicide is explicitly excluded, not included.** Subsection (e)
+   states plainly: *"Nothing in this Section is intended to interfere with or
+   prevent the investigation, arrest, or prosecution of any person for the delivery
+   or distribution of cannabis, methamphetamine or other controlled substances,
+   drug-induced homicide, or any other crime."* Someone who supplied the drugs that
+   caused an overdose and then calls for help receives **no protection** from
+   Illinois's drug-induced-homicide statute (720 ILCS 5/9-3.3) — the opposite of
+   what the prior draft implied. This is analytically significant: it preserves
+   exactly the deterrent to calling 911 that Good Samaritan laws are designed to
+   remove, for the specific case (a using partner, a dealer-friend) most likely to
+   be present at a West Side overdose.
+
+Confirmed accurate from the prior draft: immunity is capped by substance-specific
+quantity thresholds — under 3g for heroin/cocaine/morphine/LSD, under 40g for
+peyote/barbiturates/amphetamine, under 6g for pentazocine/methaqualone/PCP/ketamine,
+and under 40g for any other Schedule I/II narcotic (fentanyl falls here, uncapped by
+name but captured by the catchall) — and is forfeited if law enforcement already had
+independent reasonable suspicion or probable cause before the call was made (§(e)).
+
+**What it does in practice:** stronger than Dallas's affirmative-defense structure
+for simple possession specifically, but with a hole the prior draft missed — no
+protection against drug-induced-homicide liability, which is precisely the charge
+Illinois is willing to escalate to (see §4.6) and precisely the fear most likely to
+suppress a 911 call from someone present at a fentanyl-supply-chain overdose.
+**Strategic implication:** the recommendation here isn't "the law is strong, just
+raise awareness of it" (the prior draft's conclusion) — it's that the law's real
+boundary (simple possession, not supply-adjacent liability) needs to be understood
+and possibly legislatively addressed, closer in spirit to Dallas's actual
+recommendation than this paper's first pass assumed.
 
 ## 4.3 Fentanyl Test Strip Legality
 
@@ -126,14 +153,25 @@ of existing legal capacity, not the capacity itself.
 ## 4.6 Drug Possession and Penalty Structure
 
 Possession of any amount of a Schedule I or II narcotic (fentanyl is Schedule II) is
-a Class 4 felony (1–3 years, up to $25,000 fine) — with a statutory "410 probation"
-option allowing first-time offenders to plead guilty without entering judgment, on
-consent. Delivery of 1–14 grams of fentanyl is a Class 1 felony (4–15 years, up to
-$250,000). A sentencing enhancement adds 3 years to any drug offense involving any
-amount of fentanyl (legislative proposals as of this pass would raise this to 5
-years). This is a meaningfully lower penalty ceiling than Texas's Penalty Group 1-B
-structure, which scales up to 99 years or life imprisonment for large fentanyl
-quantities and permits murder charges for a fatal fentanyl-related sale.
+a Class 4 felony (1–3 years, up to $25,000 fine) under 720 ILCS 570/402(c) — with a
+statutory "410 probation" option allowing first-time offenders to plead guilty
+without entering judgment, on consent. Delivery of 1–14 grams of fentanyl is a Class
+1 felony (4–15 years, up to $250,000).
+
+*(Revised 2026-10-11: the prior draft stated the fentanyl sentencing enhancement
+applies to "any drug offense involving any amount of fentanyl," which overstated its
+reach.)* Per 720 ILCS 570/401(b-1) (subsection letter needs final confirmation
+against the Act's full current text before this goes in the manuscript), the 3-year
+enhancement applies specifically to violations of §§401, 401.1, 405, 405.1, 405.2,
+and 407 — Illinois's **manufacture, delivery, and possession-with-intent-to-deliver**
+provisions — not to simple possession under §402. Recent legislative activity would
+raise the enhancement from 3 to 5 years for the manufacture/delivery provisions
+specifically. In practice, this means a person arrested with a small personal-use
+quantity faces the base Class 4 felony exposure described above, without the
+fentanyl add-on; the add-on binds only at the delivery/trafficking tier. This is a
+meaningfully lower penalty ceiling than Texas's Penalty Group 1-B structure, which
+scales up to 99 years or life imprisonment for large fentanyl quantities and permits
+murder charges for a fatal fentanyl-related sale.
 
 Cook County additionally operates pre-arrest deflection programs — redirecting
 people with substance use disorder to community-based treatment before arrest, with
@@ -203,7 +241,7 @@ toxicology" finding without a records request — flag for Deliverable 3.
 | Policy | Level | Status (as of Sept 2026) | Real-world impact | Strategic implication |
 |---|---|---|---|---|
 | Naloxone standing order | State | Active — 225 ILCS 85/19.1 (2015) | Legal foundation for every naloxone distributor identified in Deliverable 1; no special carve-out needed | Not the binding constraint; reach/chemistry are |
-| Good Samaritan law | State | Active — 720 ILCS 570/414, actual immunity (not affirmative defense) | Stronger than Dallas's Jessica Sosa Act; capped by substance-specific quantity thresholds | Awareness among target population is the open question, not statutory strength |
+| Good Samaritan law | State | Active — 720 ILCS 570/414, actual immunity (not affirmative defense), **verified against primary text 10/11** | Covers only Class 4 felony simple possession; explicitly does NOT cover drug-induced homicide (§(e)) — narrower than first drafted | Real gap is supply-adjacent liability fear, not awareness of an otherwise-strong law |
 | Fentanyl test strips | State | Legal — excluded from paraphernalia definition | OTC sale + SSP distribution permitted | Doesn't detect xylazine/medetomidine — a capability gap independent of legality |
 | Syringe services programs | State | Authorized statewide, any org may operate | Enables COIP and similar programs with no special authorization | Remaining gaps are resourcing/siting, not legality |
 | MAT environment | Federal/State | Methadone federally restricted (OTP-only, 28-day take-home as of 2024 rule); buprenorphine liberalized 2023 | Bridge Clinic + Austin Health Center embed low-threshold access on the West Side | Prescriber under-utilization of existing legal capacity is the gap |
@@ -215,11 +253,15 @@ toxicology" finding without a records request — flag for Deliverable 3.
 
 ## Verification needed before this enters the manuscript (Deliverable 3 tasks)
 
-- [ ] Confirm 720 ILCS 570/414's exact immunized offense list directly against
-      statute text (the Criminal Code sections 9-3.3 and 12-3.05 cited by one
-      secondary source — possibly drug-induced homicide and an aggravated-battery
-      provision — need direct primary confirmation before being stated as fact; this
-      would be a significant finding if confirmed).
+- [x] ~~Confirm 720 ILCS 570/414's exact immunized offense list directly against
+      statute text~~ **Done 2026-10-11** — fetched and read the actual statute
+      (P.A. 97-678 text). Corrected §4.2 above: immunity covers only Class 4 felony
+      possession, explicitly excludes drug-induced homicide. The prior secondary-
+      source claim about paraphernalia/meth-control/Criminal-Code coverage was
+      wrong and has been removed.
+- [ ] Confirm the exact subsection locator for the fentanyl sentencing enhancement
+      (currently cited as 720 ILCS 570/401(b-1) pending final confirmation) and
+      verify directly whether the 3→5 year legislative change has passed.
 - [ ] Confirm whether the Remediation Fund's cited 2024 line items ($33M warm
       hand-off, $21.8M MAT, $24.6M prevention) are single-fiscal-year or cumulative
       figures, from the IDHS annual report PDF directly.
