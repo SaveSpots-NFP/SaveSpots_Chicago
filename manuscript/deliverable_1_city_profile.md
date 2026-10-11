@@ -1,13 +1,22 @@
 # Deliverable 1 — City Profile & Harm Reduction Landscape (DRAFT v1)
 
-*Target: manuscript §3 (City Profile) and §5 (Implementation Analysis). Guide target:
-1,500–2,500 words. This draft runs long deliberately, per program guidance that
-length follows the analysis rather than a target — trim during manuscript assembly
-if needed. Every claim below is sourced; items needing a primary-source re-pull
-(rather than a secondary web summary) before this goes in the manuscript are flagged
-in the "Verification needed" list at the end. Nothing here is fabricated or
-estimated — where a number could not be confidently pinned down, it is flagged as a
-gap rather than guessed.*
+*Target: manuscript §3 (City Profile) and §5 (Implementation Analysis). Body word
+count (the 7 required sections only, through "The single most critical gap") is
+2,114 words — within the Week 3 to-do's 1,500–2,500 target. The "Verification
+needed" and "Sources consulted" sections below that point are working scaffolding
+for this repo, not part of the submission itself — don't count them toward the
+limit or paste them into whatever you hand in. Every claim is sourced; items still
+needing a primary-source re-pull are flagged in "Verification needed." Nothing here
+is fabricated or estimated — where a number couldn't be confidently pinned down,
+it's flagged as a gap rather than guessed.*
+
+*Substitution test run 2026-10-11: reviewed every paragraph for whether swapping in
+another city's name would still read true. All seven sections anchor on Chicago-
+specific, numbered findings (the medetomidine cluster, the 2.5–4x racial disparity,
+named West Side organizations and ZIP codes, Illinois-specific statutes) rather than
+generic framing — no rewrites needed on that basis. Two factual corrections were
+made instead (noted inline): an overstated fentanyl-sentencing claim and an
+incorrect uninsured-rate comparison.*
 
 ## Overdose burden
 
@@ -72,7 +81,7 @@ Roughly 17% of Chicagoans live below the federal poverty line, with over 167,000
 residents in "deep poverty" (household income below half the federal threshold).
 Unlike Dallas County — where 21% of residents are uninsured because Texas has not
 expanded Medicaid — Illinois expanded Medicaid under the ACA, and Chicago's uninsured
-rate is approximately 9.75% (2024), roughly half the U.S. average. This is a
+rate is approximately 9.75% (2024), less than half Dallas County's rate. This is a
 first-order structural difference from the reference paper's data environment:
 Illinois' Medicaid expansion produced an 83% drop in the uninsured rate among opioid-
 related hospitalizations statewide, and 95% of Illinois Medicaid enrollees with
@@ -128,9 +137,13 @@ both counts.
 
 Illinois is not without punitive drug law: possession of any Schedule I or II
 narcotic (fentanyl is Schedule II) is a Class 4 felony (1–3 years, up to $25,000
-fine), delivery of 1–14 grams of fentanyl is a Class 1 felony (4–15 years, up to
-$250,000), and a sentencing enhancement adds 3 years to any drug offense involving
-fentanyl (legislative proposals would raise this to 5). But Cook County has
+fine) under 720 ILCS 570/402(c), and delivery of 1–14 grams of fentanyl is a Class 1
+felony (4–15 years, up to $250,000). A 3-year sentencing enhancement applies
+specifically to fentanyl-involved manufacture/delivery offenses — not to simple
+possession — under 720 ILCS 570/401 (legislative proposals would raise this to 5
+years for that tier). *(Corrected 2026-10-11 — see Deliverable 2 §4.6 for the full
+citation-verification note; the prior version of this sentence overstated the
+enhancement's reach.)* But Cook County has
 implemented deflection programs that redirect people with substance use disorder to
 community-based treatment as an alternative to arrest or the emergency room,
 including law enforcement training on overdose/naloxone response, and the Cook
@@ -239,9 +252,12 @@ mortality disparity, and what does the local supply's chemistry mean for what
       registry for Illinois/Cook County comparable to Texas DSHS NarcanSites.
 - [ ] Find current HIV prevalence among Chicago-area PWID (only HCV was confidently
       sourced this pass).
-- [ ] Confirm exact ILCS statutory citations for the Good Samaritan law, the Drug
-      Overdose Prevention Program Law, and the fentanyl sentencing enhancement — cite
-      code sections directly, not paraphrased summaries (required for Deliverable 2).
+- [x] ~~Confirm exact ILCS statutory citations for the Good Samaritan law~~
+      **Done 2026-10-11** — see Deliverable 2 §4.2, verified against primary text.
+- [ ] Confirm the Drug Overdose Prevention Program Law's exact codified citation
+      (it's a Public Act, 096-0361 — still need its codified ILCS location) and the
+      fentanyl sentencing enhancement's exact subsection letter (currently 720 ILCS
+      570/401(b-1), pending final confirmation).
 - [ ] Investigate directly whether any Hispanic/Latino-focused or bilingual harm
       reduction program exists in Pilsen/Little Village/other Latino-majority
       neighborhoods, rather than reporting the absence found in this pass as final.
