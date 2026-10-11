@@ -5,6 +5,14 @@ until this plan is reviewed and approved. Becomes manuscript §2. This draft is 
 for your review — treat it as a proposal to sign off on, amend, or push back on
 before Deliverable 4 (the analytic repository) begins.*
 
+*Length check (TO-DO 06's "two pages max" for "The plan" section specifically, not
+the inventory table above it): the plan section is 966 words — about 1.8 pages
+single-spaced, or 3.5 pages if double-spaced APA-style. The guide doesn't state
+which spacing applies to this particular deliverable (unlike the full manuscript,
+which is explicitly double-spaced). Worth a quick confirmation with Ali/Sameer; if
+double-spacing is expected, this needs trimming before submission — flag this rather
+than guess.*
+
 ## Data inventory
 
 One row per dataset investigated, including absences — a documented absence is a
