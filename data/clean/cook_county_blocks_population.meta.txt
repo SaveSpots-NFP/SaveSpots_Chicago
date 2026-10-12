@@ -1,0 +1,7 @@
+Source: 2020 Census P.L. 94-171 (P1_001N), TIGER/Line 2024
+Geography: Cook County, IL (state 17, county 031)
+Total blocks: 83018
+Populated blocks: 70992
+Unmatched/null population blocks: 0
+Total measured population: 5275541
+Tracts: 1332

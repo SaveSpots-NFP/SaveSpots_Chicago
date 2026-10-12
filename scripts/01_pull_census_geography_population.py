@@ -12,6 +12,7 @@ Outputs (data/clean/, safe to commit — no individual-level or sensitive data):
 Run: python scripts/01_pull_census_geography_population.py
 """
 import io
+import os
 import sys
 import zipfile
 from pathlib import Path
@@ -26,6 +27,27 @@ CLEAN_DIR = REPO_ROOT / "data" / "clean"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 CLEAN_DIR.mkdir(parents=True, exist_ok=True)
 
+
+def load_dotenv(env_path: Path):
+    """Minimal .env loader - avoids adding python-dotenv as a dependency."""
+    if not env_path.exists():
+        return
+    for line in env_path.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        os.environ.setdefault(key.strip(), value.strip())
+
+
+load_dotenv(REPO_ROOT / ".env")
+CENSUS_API_KEY = os.environ.get("CENSUS_API_KEY")
+if not CENSUS_API_KEY:
+    sys.exit(
+        "ERROR: CENSUS_API_KEY not found. Copy .env.example to .env and fill in "
+        "your key from https://api.census.gov/data/key_signup.html"
+    )
+
 STATE_FIPS = "17"  # Illinois
 COUNTY_FIPS = "031"  # Cook County
 
@@ -34,6 +56,7 @@ TIGER_TRACT_URL = f"https://www2.census.gov/geo/tiger/TIGER2024/TRACT/tl_2024_{S
 CENSUS_PL_API = (
     f"https://api.census.gov/data/2020/dec/pl"
     f"?get=P1_001N,NAME&for=block:*&in=state:{STATE_FIPS}%20county:{COUNTY_FIPS}"
+    f"&key={CENSUS_API_KEY}"
 )
 
 
