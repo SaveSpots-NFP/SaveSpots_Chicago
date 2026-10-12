@@ -1,0 +1,9 @@
+MEASURED access analysis - PROVISIONAL (v2 registry, 94 sites: 82 CPL branches + 12 named orgs)
+Supply sites used: 94
+Projection: EPSG:26971
+Total measured population: 5275541
+Beyond 1_mile: 2694247 (51.07%)
+Beyond 2_mile: 2106313 (39.93%)
+Beyond 5_mile: 1129943 (21.42%)
+
+STRONG PROVISIONAL, NOT YET FINAL - registry (94 sites) still lacks SAMHSA facilities (needs API registration) and the full statewide IDHS DOPP provider list. Re-run after adding those before citing in the manuscript.

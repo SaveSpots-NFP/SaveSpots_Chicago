@@ -11,12 +11,13 @@ Thresholds: 1 mile (1,609.344 m), 2 miles (3,218.688 m), 5 miles (8,046.72 m) -
 identical to the reference paper, for direct comparability.
 
 IMPORTANT CAVEAT: the supply registry this script currently reads
-(naloxone_supply_registry_v1.csv) has only 9 seed sites, versus the reference
-paper's 38 for Dallas. These numbers are a pipeline validation run, NOT a
-publishable finding - the registry still needs SAMHSA facilities and the full
-IDHS DOPP provider list before any number here goes in the manuscript. This
-script's job is to prove the mechanism is correct; expanding the registry is
-separate work.
+(naloxone_supply_registry_v2.csv) has 94 sites - 82 Chicago Public Library
+branches (confirmed via CDPH's naloxone-at-libraries program) plus 12 named
+harm-reduction/health orgs - exceeding the reference paper's 38 for Dallas.
+This is a much stronger basis than v1, but SAMHSA's facility locator (requires
+API registration, not yet completed) and the full statewide IDHS DOPP provider
+list (only 2 Cook-specific entries extracted so far) are still not included.
+Treat as a strong provisional estimate, not yet final for manuscript citation.
 
 Run: python scripts/03_measured_access_analysis.py
 """
@@ -33,7 +34,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 CLEAN_DIR = REPO_ROOT / "data" / "clean"
 
 BLOCKS_PATH = CLEAN_DIR / "cook_county_blocks.gpkg"
-SUPPLY_PATH = CLEAN_DIR / "naloxone_supply_registry_v1.csv"
+SUPPLY_PATH = CLEAN_DIR / "naloxone_supply_registry_v2.csv"
 
 PROJECTED_CRS = "EPSG:26971"  # NAD83 / Illinois East (meters)
 GEOGRAPHIC_CRS = "EPSG:4326"
@@ -50,7 +51,7 @@ def main():
     print(f"  {len(blocks)} blocks, {n_supply} supply sites")
     print(
         f"  CAVEAT: {n_supply} sites is a seed registry, not a complete inventory "
-        "(reference paper used 38 for Dallas). Treat all output as provisional."
+        "(reference paper used 38 for Dallas; v2 now exceeds this with 94 sites, mostly from Chicago Public Library naloxone program). Treat all output as provisional."
     )
 
     # Census Bureau internal points (INTPTLAT20/INTPTLON20), matching the
@@ -99,17 +100,17 @@ def main():
     )
 
     # Drop geometry for the tabular output; keep a separate geo export for mapping
-    out_csv = CLEAN_DIR / "block_access_distances_v1.csv"
+    out_csv = CLEAN_DIR / "block_access_distances_v2.csv"
     block_points.drop(columns="geometry").to_csv(out_csv, index=False)
     print(f"\nWrote {out_csv}")
 
-    out_gpkg = CLEAN_DIR / "block_access_distances_v1.gpkg"
+    out_gpkg = CLEAN_DIR / "block_access_distances_v2.gpkg"
     block_points.to_crs(GEOGRAPHIC_CRS).to_file(out_gpkg, driver="GPKG")
     print(f"Wrote {out_gpkg}")
 
-    meta_path = CLEAN_DIR / "block_access_distances_v1.meta.txt"
+    meta_path = CLEAN_DIR / "block_access_distances_v2.meta.txt"
     with open(meta_path, "w") as f:
-        f.write("MEASURED access analysis - PROVISIONAL (v1 seed registry, 9 sites)\n")
+        f.write("MEASURED access analysis - PROVISIONAL (v2 registry, 94 sites: 82 CPL branches + 12 named orgs)\n")
         f.write(f"Supply sites used: {n_supply}\n")
         f.write(f"Projection: {PROJECTED_CRS}\n")
         f.write(f"Total measured population: {total_pop}\n")
@@ -117,9 +118,10 @@ def main():
             beyond_pop = int(populated.loc[populated[f"beyond_{label}"], "P1_001N"].sum())
             f.write(f"Beyond {label}: {beyond_pop} ({beyond_pop/total_pop*100:.2f}%)\n")
         f.write(
-            "\nDO NOT CITE THESE NUMBERS IN THE MANUSCRIPT - registry is incomplete. "
-            "Re-run after expanding naloxone_supply_registry to include SAMHSA and "
-            "IDHS DOPP sites.\n"
+            "\nSTRONG PROVISIONAL, NOT YET FINAL - registry (94 sites) still lacks "
+            "SAMHSA facilities (needs API registration) and the full statewide IDHS "
+            "DOPP provider list. Re-run after adding those before citing in the "
+            "manuscript.\n"
         )
     print(f"Wrote {meta_path}")
 
