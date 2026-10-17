@@ -21,3 +21,4 @@ data/raw/*_me_raw*
 # scripts/01_pull_census_geography_population.py's pinned URLs. Only the
 # Cook-County-filtered output in data/clean/ is committed.
 data/raw/tiger/
+data/raw/cta_gtfs/
