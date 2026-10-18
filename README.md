@@ -31,16 +31,16 @@ declaration: `manuscript/deliverable_3_data_inventory_and_plan.md`.
 | Finding | Number | From | Script |
 |---|---|---|---|
 | Cook County 2020 measured population | 5,275,541 | `data/clean/cook_county_blocks_population.meta.txt` | `01` |
-| Naloxone supply registry size | 94 sites (82 CPL branches + 12 named orgs) | `data/clean/naloxone_supply_registry_v2.csv` | `02`, `02b` |
-| Population beyond 1 mile of supply | 51.07% (2,694,247 residents) | `data/clean/block_access_distances_v2.meta.txt` | `03` |
-| Population beyond 5 miles of supply | 21.42% | `data/clean/block_access_distances_v2.meta.txt` | `03` |
+| Naloxone supply registry size | 103 sites (82 CPL branches + 15 named orgs + 6 CTA vending machines) | `data/clean/naloxone_supply_registry_v2.csv` | `02`, `02b` |
+| Population beyond 1 mile of supply | 50.04% (2,639,999 residents) | `data/clean/block_access_distances_v2.meta.txt` | `03` |
+| Population beyond 5 miles of supply | 20.83% | `data/clean/block_access_distances_v2.meta.txt` | `03` |
 | Opioid deaths, Cook County ME, 2022–2025 window | 5,783 total cases, 5,372 geocoded | `data/clean/tract_opioid_mortality_counts.csv` | `04` |
-| Access-distance vs. mortality rate correlation | Spearman rho = -0.31 (all tracts), -0.38 (excl. small-cell) | `data/clean/tract_access_vs_mortality.csv` | `05` |
-| Composite vulnerability tiers | Tier 1: 346 tracts, Tier 2: 768, Tier 3: 218 | `data/clean/composite_vulnerability_index_tract.csv` | `07` |
+| Access-distance vs. mortality rate correlation | Spearman rho = -0.32 (all tracts), -0.37 (excl. small-cell) | `data/clean/tract_access_vs_mortality.csv` | `05` |
+| Composite vulnerability tiers | Tier 1: 344 tracts, Tier 2: 770, Tier 3: 218 | `data/clean/composite_vulnerability_index_tract.csv` | `07` |
 | Sensitivity: poverty-weight-doubled flip rate | 0.00% | same | `07` |
-| Sensitivity: distance-weight-doubled flip rate | 12.09% | same | `07` |
+| Sensitivity: distance-weight-doubled flip rate | 12.61% | same | `07` |
 | Placement candidates ranked | 11,370 (active business licenses) | `data/clean/placement_candidates_ranked.csv` | `08` |
-| Greedy coverage, 10/25/50 sites | 3.51% / 6.60% / 9.53% of unserved population | `data/clean/placement_greedy_coverage.csv` | `08` |
+| Greedy coverage, 10/25/50 sites | 3.51% / 6.53% / 9.30% of unserved population | `data/clean/placement_greedy_coverage.csv` | `08` |
 
 **Read the access-vs-mortality correlation carefully**: it is NEGATIVE (closer to
 supply correlates with higher, not lower, mortality). The most likely explanation is
@@ -62,14 +62,18 @@ is not evidence that naloxone access fails; see the script's own output notes an
 | Business licenses (placement candidates) | City of Chicago Data Portal | Current/active | Open, Socrata API |
 
 Not yet included (open gaps, not estimated around): SAMHSA facility locator (API
-needs registration, not completed); the full statewide IDHS DOPP provider list
-(only 2 Cook-specific entries extracted so far); HIV prevalence among Chicago PWID.
+needs registration, not completed — skipped for now since approval timing is
+outside our control); HIV prevalence among Chicago PWID. The IDHS DOPP provider
+list has now been fully extracted (all 14 statewide entries reviewed; only
+Live4Lali and Transforming Reentry Services serve Cook County) and is complete.
 
 ## Limitations
 
-- **Supply registry is still growing.** 94 sites is already larger than the
-  reference paper's 38 for Dallas, but SAMHSA facilities and the full IDHS DOPP list
-  are not yet included — the true access picture could shift further.
+- **Supply registry could still grow further.** 103 sites is already well above
+  the reference paper's 38 for Dallas, and the IDHS DOPP list is now fully
+  reviewed, but SAMHSA's facility locator is not included (requires API
+  registration/approval, outside our control) — the true access picture could
+  shift somewhat further if that's added later.
 - **Mortality window is 2022–2025, not a single calendar year**, chosen to keep
   tract-level counts meaningful; 952 of 1,332 tracts still fall below the self-imposed
   5-case small-cell display threshold even with 4 years pooled.
@@ -106,4 +110,4 @@ references/    source PDFs (Dallas paper, deliverable guide)
 Internet access is required — every script pulls live from its public source rather
 than bundling a static copy, so re-running after upstream data changes will reflect
 the latest available data (and may produce slightly different numbers than the table
-above, which reflects a pull made 2026-10-17).
+above, which reflects a pull made 2026-10-18).

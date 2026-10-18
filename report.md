@@ -3,7 +3,7 @@
 *This is the dense, sourced findings document the manuscript (Deliverable 5) gets
 written from, per the repo structure standard. Every number here traces to a script
 in `scripts/` and an output in `data/clean/`. Status: pipeline complete through
-placement ranking; not yet frozen (Week 10). Pulled 2026-10-17.*
+placement ranking; not yet frozen (Week 10). Pulled 2026-10-18.*
 
 ## 1. Population and geography (script 01)
 
@@ -14,7 +14,7 @@ denominator for every access calculation below. Source: 2020 Census P.L. 94-171
 
 ## 2. Naloxone supply registry (scripts 02, 02b)
 
-**94 confirmed supply sites**, assembled by hand (Environment C — no consolidated
+**103 confirmed supply sites**, assembled by hand (Environment C — no consolidated
 Illinois feed exists, unlike Texas DSHS NarcanSites):
 - **82 Chicago Public Library branches** — naloxone stocked at all CPL branches,
   no questions asked, per IDHS's funded-provider directory and multiple CDPH press
@@ -25,20 +25,22 @@ Illinois feed exists, unlike Texas DSHS NarcanSites):
   Stroger and Provident Hospital EDs; West Side Heroin/Opioid Task Force; Live4Lali;
   Transforming Reentry Services (2 locations).
 
-94 sites already exceeds the reference paper's 38 for Dallas County. Still missing:
-SAMHSA's facility locator (requires API registration, not completed) and the
-remainder of the statewide IDHS DOPP provider list beyond the 2 Cook-specific
-entries found. The true count is almost certainly higher than 94.
+103 sites already exceeds the reference paper's 38 for Dallas County. The IDHS
+DOPP provider list has now been fully reviewed (all 14 statewide entries; only
+Live4Lali and Transforming Reentry Services serve Cook County, both included).
+Still missing: SAMHSA's facility locator, which requires API registration with
+an unknown approval timeline and was deliberately not blocked on. The true
+count could still grow somewhat if that's added in a future pass.
 
 ## 3. Measured access analysis (script 03)
 
-Against the full 94-site registry, population-weighted straight-line distance from
+Against the full 103-site registry, population-weighted straight-line distance from
 every census block's internal point (matching the reference paper's exact method):
 
-- **Beyond 1 mile of supply: 2,694,247 residents (51.07%)**
-- Beyond 2 miles: 2,106,313 (39.93%)
-- Beyond 5 miles: 1,129,943 (21.42%)
-- Population-weighted average distance to nearest supply: 4,652 meters (~2.9 miles)
+- **Beyond 1 mile of supply: 2,639,999 residents (50.04%)**
+- Beyond 2 miles: 2,067,401 (39.19%)
+- Beyond 5 miles: 1,099,133 (20.83%)
+- Population-weighted average distance to nearest supply: 4,579 meters (~2.9 miles)
 
 **This is a fundamentally different access picture than Dallas's 84.03% beyond one
 mile.** With a 9-site seed registry (before the library discovery), the same
@@ -70,11 +72,11 @@ against real observed deaths rather than against a second access-based proxy.
 average distance to supply, correlated against tract-level opioid mortality rate per
 100,000 (both measured quantities):
 
-- Spearman rho = **-0.3057** (p = 3.7×10⁻³⁰), all 1,330 matched tracts
-- Spearman rho = **-0.3794** (p = 1.9×10⁻¹⁴), excluding the 950 small-cell-flagged
+- Spearman rho = **-0.3171** (p = 3.7×10⁻³⁰), all 1,330 matched tracts
+- Spearman rho = **-0.3734** (p = 1.9×10⁻¹⁴), excluding the 950 small-cell-flagged
   tracts (sensitivity check)
 - Worst-access quartile (333 tracts) vs. highest-mortality-rate quartile (333
-  tracts): only 24 tracts overlap, versus 83 expected under no relationship
+  tracts): only 20 tracts overlap, versus 83 expected under no relationship
 
 **The correlation is negative**: tracts closer to supply have higher, not lower,
 mortality rates. This should NOT be read as "naloxone access increases risk" or
@@ -94,7 +96,7 @@ Five equal-weighted (0.20 each) layers, all 1,332 tracts scored (100% coverage):
 poverty rate (ACS S1701), uninsurance rate (ACS S2701), CDC/ATSDR SVI 2022 overall
 percentile, measured distance to nearest supply, and inverted CTA transit
 connectivity (stops within 0.5mi of tract centroid). Score range 0.1549-0.9554.
-Jenks natural-break tiers: **Tier 1 (highest vulnerability): 346 tracts; Tier 2: 768;
+Jenks natural-break tiers: **Tier 1 (highest vulnerability): 344 tracts; Tier 2: 770;
 Tier 3: 218.**
 
 Deliberate departure from the reference paper: no modeled-mortality layer included,
@@ -104,7 +106,7 @@ circularity of testing an index against a quantity it already contains.
 
 **Sensitivity analysis** (disclosed regardless of outcome, per the research
 contract): doubling the poverty weight changes **0.00%** of tract tiers — fully
-robust. Doubling the access-distance weight changes **12.09%** — notably *more*
+robust. Doubling the access-distance weight changes **12.61%** — notably *more*
 stable than the reference paper's own distance-weighted Dallas variant (21.5%, which
 exceeded Dallas's own 15% stability threshold). This composite index is more robust
 to its own construction choices than the reference paper's was.
@@ -114,7 +116,7 @@ to its own construction choices than the reference paper's was.
 11,370 active Chicago business-license candidates (Retail Food Establishment,
 Tobacco, Package Goods, Filling Station, Tavern — Chicago's equivalent of Dallas's
 TABC-permit-derived candidate pool), ranked by composite-need × measured-reach among
-currently-unserved residents (beyond 1 mile of the 94-site registry, within 0.5 miles
+currently-unserved residents (beyond 1 mile of the 103-site registry, within 0.5 miles
 of the candidate).
 
 Top-ranked cluster: **Avondale, along the Pulaski/Diversey corridor** — the top 5
@@ -122,8 +124,8 @@ candidates each reach roughly 13,000-14,000 unserved residents, with tract compo
 scores in the 0.69-0.75 range (upper-middle of the observed 0.15-0.96 scale).
 
 **Greedy de-overlapped coverage**: the best 10 non-overlapping sites would newly
-reach 94,456 unserved residents (3.51% of the 2,694,247 total unserved); 25 sites →
-177,849 (6.60%); 50 sites → 256,676 (9.53%). These percentages are meaningfully
+reach 92,714 unserved residents (3.51% of the 2,639,999 total unserved); 25 sites →
+172,492 (6.53%); 50 sites → 245,566 (9.30%). These percentages are meaningfully
 lower than Dallas's equivalent figures (5.4% / 10.6% / 17.7% for 10/25/50 sites) —
 plausibly because Chicago's remaining unserved population, after the library network
 already covers dense areas, is more residually scattered and harder to reach
