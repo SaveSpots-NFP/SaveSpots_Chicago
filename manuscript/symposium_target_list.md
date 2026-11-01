@@ -1,4 +1,9 @@
-# Symposium Target List (TO-DO 07, DRAFT v1)
+# Symposium Target List
+
+*Last verified 2026-11-01: NCUR 2027 reconfirmed open and on track (deadline
+Dec 4, 2026, about a month out as of this check). Lake Forest's 2027 date is now
+confirmed (April 13). Loyola/UIC/UChicago outside-student eligibility still
+unconfirmed from public pages — send the eligibility emails below this week.*
 
 *Per guide §11.3: identify venues now (Week 3), not Week 15 — most spring symposia
 post calls between November and January, after this paper's numbers are frozen and
@@ -10,7 +15,7 @@ word limit, poster size, outside-submission policy.*
 | Venue | Deadline | Word limit | Poster size | Outside submissions? |
 |---|---|---|---|---|
 | **NCUR 2027** (National Conference on Undergraduate Research) — Apr 12–14, 2027, Grand Rapids, MI | Dec 4, 2026 (portal open since Sept 9, 2026 — confirm it hasn't closed early; one search result ambiguously suggested "closed," contradicting the official deadline date found elsewhere) | 300 words max (title ≤30 words, no title/authors/references in body) | 36"H × 48"W (2026 spec; confirm 2027 matches) | **Yes** — this is CUR's flagship national conference, open to undergraduates from any accredited U.S. institution. Best-fit option found this pass. |
-| **Lake Forest College Student Symposium** (your own institution) | Not yet posted for 2027 — 2026's was held Tuesday, April 7; 2027's will likely post similarly in late winter/early spring | Not yet posted for 2027 | Not yet posted for 2027 | N/A — internal to LFC, you're automatically eligible as an LFC student |
+| **Lake Forest College Student Symposium** (your own institution) | **Confirmed date: Tuesday, April 13, 2027.** Abstract/poster submission deadline not yet posted — check back closer to the date | Not yet posted | Not yet posted | N/A — internal to LFC, you're automatically eligible as an LFC student |
 
 ## Needs direct confirmation (per the to-do's own fallback: email and ask)
 
