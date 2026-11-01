@@ -158,20 +158,33 @@ statutory "410 probation" option allowing first-time offenders to plead guilty
 without entering judgment, on consent. Delivery of 1–14 grams of fentanyl is a Class
 1 felony (4–15 years, up to $250,000).
 
-*(Revised 2026-10-11: the prior draft stated the fentanyl sentencing enhancement
-applies to "any drug offense involving any amount of fentanyl," which overstated its
-reach.)* Per 720 ILCS 570/401(b-1) (subsection letter needs final confirmation
-against the Act's full current text before this goes in the manuscript), the 3-year
-enhancement applies specifically to violations of §§401, 401.1, 405, 405.1, 405.2,
-and 407 — Illinois's **manufacture, delivery, and possession-with-intent-to-deliver**
-provisions — not to simple possession under §402. Recent legislative activity would
-raise the enhancement from 3 to 5 years for the manufacture/delivery provisions
-specifically. In practice, this means a person arrested with a small personal-use
-quantity faces the base Class 4 felony exposure described above, without the
-fentanyl add-on; the add-on binds only at the delivery/trafficking tier. This is a
-meaningfully lower penalty ceiling than Texas's Penalty Group 1-B structure, which
-scales up to 99 years or life imprisonment for large fentanyl quantities and permits
-murder charges for a fatal fentanyl-related sale.
+*(Revised 2026-10-11, confirmed 2026-11-01 against two independently-retrieved
+copies of the primary text: the prior draft stated the fentanyl sentencing
+enhancement applies to "any drug offense involving any amount of fentanyl," which
+overstated its reach.)* 720 ILCS 570/401(b-1) reads: *"Excluding violations of this
+Act when the controlled substance is fentanyl, any person sentenced to a term of
+imprisonment with respect to violations of Section 401, 401.1, 405, 405.1, 405.2, or
+407, when the substance containing the controlled substance contains any amount of
+fentanyl, 3 years shall be added to the term of imprisonment imposed by the court,
+and the maximum sentence for the offense shall be increased by 3 years."* The 3-year
+enhancement applies specifically to §§401, 401.1, 405, 405.1, 405.2, and 407 —
+Illinois's **manufacture, delivery, and possession-with-intent-to-deliver**
+provisions — not to simple possession under §402, and explicitly not to cases where
+fentanyl itself is the charged substance (those are sentenced directly under
+401(a)(1.5)/(c)(1.5)'s own fentanyl-specific weight tiers instead; see below). A
+2026 legal-commentary review (Stobbs Law, confirmed Nov. 2025, no change since)
+found no enacted 2026 amendments to Illinois fentanyl possession law — bills
+proposing to raise this enhancement to 5 years (HB 1038, SB 280) remain unpassed
+proposals. In practice, this means a person arrested with a small personal-use
+quantity faces the base Class 4 felony exposure described above, without this
+add-on; it binds only at the delivery/trafficking tier.
+
+Fentanyl-specific delivery/intent penalties, confirmed directly: under 401(c)(1.5),
+1 to under 15 grams is a Class 1 felony (4–15 years); under 401(a)(1.5), 15 to under
+100 grams is Class X (6–30 years), scaling further upward by weight beyond that.
+This is a meaningfully lower penalty ceiling than Texas's Penalty Group 1-B
+structure, which scales up to 99 years or life imprisonment for large fentanyl
+quantities and permits murder charges for a fatal fentanyl-related sale.
 
 Cook County additionally operates pre-arrest deflection programs — redirecting
 people with substance use disorder to community-based treatment before arrest, with
@@ -238,7 +251,7 @@ toxicology" finding without a records request — flag for Deliverable 3.
 
 ## Policy Summary Matrix
 
-| Policy | Level | Status (as of Sept 2026) | Real-world impact | Strategic implication |
+| Policy | Level | Status (as of 2026-11-01) | Real-world impact | Strategic implication |
 |---|---|---|---|---|
 | Naloxone standing order | State | Active — 225 ILCS 85/19.1 (2015) | Legal foundation for every naloxone distributor identified in Deliverable 1; no special carve-out needed | Not the binding constraint; reach/chemistry are |
 | Good Samaritan law | State | Active — 720 ILCS 570/414, actual immunity (not affirmative defense), **verified against primary text 10/11** | Covers only Class 4 felony simple possession; explicitly does NOT cover drug-induced homicide (§(e)) — narrower than first drafted | Real gap is supply-adjacent liability fear, not awareness of an otherwise-strong law |
@@ -259,9 +272,10 @@ toxicology" finding without a records request — flag for Deliverable 3.
       possession, explicitly excludes drug-induced homicide. The prior secondary-
       source claim about paraphernalia/meth-control/Criminal-Code coverage was
       wrong and has been removed.
-- [ ] Confirm the exact subsection locator for the fentanyl sentencing enhancement
-      (currently cited as 720 ILCS 570/401(b-1) pending final confirmation) and
-      verify directly whether the 3→5 year legislative change has passed.
+- [x] ~~Confirm the exact subsection locator for the fentanyl sentencing
+      enhancement~~ **Done 2026-11-01** — 720 ILCS 570/401(b-1) confirmed correct
+      via two independently-retrieved copies of the verbatim text; 3→5 year change
+      confirmed NOT enacted (still a proposal, HB 1038/SB 280).
 - [ ] Confirm whether the Remediation Fund's cited 2024 line items ($33M warm
       hand-off, $21.8M MAT, $24.6M prevention) are single-fiscal-year or cumulative
       figures, from the IDHS annual report PDF directly.
