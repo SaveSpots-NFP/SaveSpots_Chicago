@@ -39,16 +39,22 @@ short on options, email... and ask department admins directly").
 | **CUR Scholars Transforming through Research (STR) program**, formerly "Posters on the Hill" — DC-based, congressional poster event | **Missed for this cycle** — application window was ~June–Sept 2026, already closed by this draft's date (Oct 11, 2026). Note for a possible future cycle if this project continues past the program's end; not useful for this semester's deliverables. |
 | **APHA (American Public Health Association) Annual Meeting**, Nov 7–10, 2027, Philadelphia, PA | Based on the historical pattern (2026 meeting's abstract deadline was March 31, 2026, for a Nov 2026 meeting), expect the 2027 call to open in early 2027 with a deadline around March 2027. Not yet posted — check apha.confex.com periodically starting ~January 2027. This is public-health-specific and a strong topical fit once it opens. |
 
-## Recommendation given the actual timeline
+## Decision (2026-11-01)
 
-Given today's date (Oct 11, 2026) against this paper's own deliverable calendar
-(manuscript draft due ~Week 13, preprint ~Week 15), **NCUR 2027 is the strongest
-confirmed option** — it's open now, explicitly accepts outside undergraduates, its
-April 2027 date comfortably follows the preprint posting, and its 300-word abstract
-limit is a format this paper's existing abstract work (once drafted per Deliverable
-7) can be adapted to directly. Treat the Chicago-area university symposia as
-secondary options pending the eligibility emails above — worth sending those emails
-this week regardless, since the to-do calls for having a full target list "now."
+**Going with Lake Forest College's own Student Symposium (April 13, 2027)** —
+simplest path, no eligibility question, no outreach emails needed. The Chicago-area
+university symposia and the eligibility emails above are deprioritized, not pursued
+further unless this changes.
+
+**One thing to actively track**: Lake Forest hasn't posted a submission deadline or
+format requirements for 2027 yet. Check back at lakeforest.edu/academics/student-
+honors-and-research/student-symposium periodically, since those details typically
+post closer to the date and currently aren't available to plan around.
+
+**NCUR 2027 remains available as a fallback** if a second venue becomes worth
+pursuing later — it's already confirmed open, but its Dec 4, 2026 deadline is far
+sooner than Lake Forest's April event, so it's not a casual add if that date
+approaches without action.
 
 ## Sources consulted this pass
 
